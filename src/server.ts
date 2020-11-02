@@ -14,7 +14,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(router);
 app.use('/uploads',express.static(path.join(__dirname,'..','uploads')));
 app.use(erroHandler);
-app.use(cors);
+app.use(cors());
 app.listen(port,()=>{
   console.log(`Api rodando na porta:${port}`);
 })
